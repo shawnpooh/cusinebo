@@ -1,0 +1,25 @@
+@mixin btn {
+  @include textStyles;
+  cursor: pointer;
+  padding: 0.8rem 1.8rem;
+  color: $color-primary;
+  border: $color-primary 1px solid;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: #fff;
+    background-color: $color-primary;
+  }
+}
+
+@mixin flexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyles($transform: uppercase) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: $transform;
+}
