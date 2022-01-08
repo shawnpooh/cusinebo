@@ -15,6 +15,10 @@ img {
   width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 .main-btn {
   @include btn;
 }
@@ -191,29 +195,7 @@ img {
   }
 
   .brand {
-    @include flexLayout;
-    @include textStyles;
-    img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: $color-primary 3px solid;
-    }
-    div {
-      font-family: $font-nunito;
-      color: $color-secondary;
-      margin-left: 20px;
-
-      .main-name {
-        font-size: 3.2em;
-        font-weight: 400;
-      }
-
-      .sub-name {
-        font-size: 1.2em;
-        font-weight: 300;
-      }
-    }
+    @include brand;
   }
 
   &-banner {
@@ -313,6 +295,46 @@ img {
       object-fit: cover;
       height: 100%;
       opacity: 0.5;
+    }
+  }
+}
+
+.footer {
+  background-color: $color-dark;
+  padding: 4rem;
+
+  &-header {
+    @include brand;
+    margin-bottom: 4rem;
+  }
+
+  .social-media {
+    @include flexLayout;
+    &-link {
+      color: $color-secondary;
+      font-size: 3rem;
+      transition: color 0.3s ease-in;
+    }
+
+    &-link:hover {
+      color: $color-primary;
+    }
+
+    &-item {
+      margin-right: 2.2rem;
+    }
+  }
+
+  &-copyright {
+    text-align: center;
+    margin-top: 4rem;
+
+    &-paragraph {
+      color: $color-secondary;
+      font-family: $font-josefinSans;
+      font-weight: 300;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
     }
   }
 }

@@ -12,6 +12,32 @@
   }
 }
 
+@mixin brand {
+  @include flexLayout;
+  @include textStyles;
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: $color-primary 3px solid;
+  }
+  div {
+    font-family: $font-nunito;
+    color: $color-secondary;
+    margin-left: 20px;
+
+    .main-name {
+      font-size: 3.2em;
+      font-weight: 400;
+    }
+
+    .sub-name {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+  }
+}
+
 @mixin flexLayout {
   display: flex;
   justify-content: center;

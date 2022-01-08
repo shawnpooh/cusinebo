@@ -13,6 +13,10 @@ img {
   width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 .main-btn {
   font-weight: 300;
   letter-spacing: 2px;
@@ -422,4 +426,88 @@ img {
      object-fit: cover;
   height: 100%;
   opacity: 0.5;
+}
+
+.footer {
+  background-color: #262626;
+  padding: 4rem;
+}
+
+.footer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.footer-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: #d3ab55 3px solid;
+}
+
+.footer-header div {
+  font-family: "Nunito", sans-serif;
+  color: #bbb;
+  margin-left: 20px;
+}
+
+.footer-header div .main-name {
+  font-size: 3.2em;
+  font-weight: 400;
+}
+
+.footer-header div .sub-name {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .social-media-link {
+  color: #bbb;
+  font-size: 3rem;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+
+.footer .social-media-link:hover {
+  color: #d3ab55;
+}
+
+.footer .social-media-item {
+  margin-right: 2.2rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-copyright-paragraph {
+  color: #bbb;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
 }
