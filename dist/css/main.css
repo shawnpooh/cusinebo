@@ -348,7 +348,7 @@ ul {
       grid-template-columns: repeat(3, 1fr);
 }
 
-.cards-wrapper .card {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,13 +363,12 @@ ul {
   overflow: hidden;
 }
 
-.cards-wrapper .card:hover .cards-wrapper .card-overlay {
+.card:hover .card-overlay {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  cursor: pointer;
 }
 
-.cards-wrapper .card-overlay {
+.card-overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,24 +390,24 @@ ul {
   height: 100%;
   background-color: rgba(211, 171, 85, 0.5);
   z-index: 1;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
-.cards-wrapper .card-overlay-heading {
+.card-overlay-heading {
   font-size: 3rem;
   font-weight: 300;
 }
 
-.cards-wrapper .card-overlay-paragraph {
+.card-overlay-paragraph {
   font-size: 1.8rem;
   font-weight: 300;
   margin-bottom: 2rem;
 }
 
-.cards-wrapper .card-overlay-btn {
+.card-overlay-btn {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -420,7 +419,7 @@ ul {
   cursor: pointer;
 }
 
-.cards-wrapper .card img {
+.card img {
   vertical-align: bottom;
   -o-object-fit: cover;
      object-fit: cover;

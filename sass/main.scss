@@ -242,60 +242,59 @@ ul {
 .cards-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
 
-  .card {
+.card {
+  @include flexLayout;
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+
+  &:hover &-overlay {
+    transform: translateX(0);
+  }
+
+  &-overlay {
     @include flexLayout;
-    aspect-ratio: 1;
-    position: relative;
-    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    font-family: $font-nunito;
+    color: #fff;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-primary, 0.5);
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: all 0.8s;
 
-    &:hover &-overlay {
-      transform: translateX(0);
+    &-heading {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+
+    &-paragraph {
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    &-btn {
+      @include textStyles;
+      color: $color-primary;
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      border: $color-primary 1px solid;
+      font-weight: 600;
       cursor: pointer;
     }
+  }
 
-    &-overlay {
-      @include flexLayout;
-      flex-direction: column;
-      position: absolute;
-      font-family: $font-nunito;
-      color: #fff;
-      letter-spacing: 2px;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($color-primary, 0.5);
-      z-index: 1;
-      transform: translateX(-50%);
-      transition: all 0.3s ease-in;
-
-      &-heading {
-        font-size: 3rem;
-        font-weight: 300;
-      }
-
-      &-paragraph {
-        font-size: 1.8rem;
-        font-weight: 300;
-        margin-bottom: 2rem;
-      }
-
-      &-btn {
-        @include textStyles;
-        color: $color-primary;
-        padding: 0.8rem 1.2rem;
-        border-radius: 40px;
-        border: $color-primary 1px solid;
-        font-weight: 600;
-        cursor: pointer;
-      }
-    }
-
-    img {
-      vertical-align: bottom;
-      object-fit: cover;
-      height: 100%;
-      opacity: 0.5;
-    }
+  img {
+    vertical-align: bottom;
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.5;
   }
 }
 
