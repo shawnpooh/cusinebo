@@ -207,6 +207,7 @@ ul {
 .about-us {
   @include flexLayout;
   padding-bottom: 5rem;
+  background-color: $color-dark;
 
   &-left {
     img {

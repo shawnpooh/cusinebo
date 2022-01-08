@@ -300,6 +300,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 5rem;
+  background-color: #262626;
 }
 
 .about-us-left img {
